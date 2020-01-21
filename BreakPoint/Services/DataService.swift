@@ -8,16 +8,20 @@
 
 import Foundation
 import Firebase
+
+//create a singleton class to manage connection to firebase and create the users
+//,groups and feeds.
+
 let DB_REF = Database.database().reference()
 
 class DataService{
     static let instance = DataService()
     
     //private variables
-    var _REF_DATABASE = DB_REF
-    var _REF_USERS = DB_REF.child("users")
-    var _REF_GROUPS = DB_REF.child("groups")
-    var _REF_FEEDS = DB_REF.child("feed")
+   private var _REF_DATABASE = DB_REF
+   private var _REF_USERS = DB_REF.child("users")
+   private var _REF_GROUPS = DB_REF.child("groups")
+   private var _REF_FEEDS = DB_REF.child("feed")
     
     //public variables
     var REF_DB :DatabaseReference {
@@ -34,11 +38,12 @@ class DataService{
     }
     
     //create user function
-    func createUser(forId uid:String ,AndUserData userData:Dictionary<String,Any>){
-        REF_DB.child(uid).updateChildValues(userData)
+    
+    func createUser(forId uid:String ,AndUserData userData:Dictionary<String,Any>)
+    {
+        REF_USERS.child(uid).updateChildValues(userData)
     }
     
-    
-    
+  
     
 }
