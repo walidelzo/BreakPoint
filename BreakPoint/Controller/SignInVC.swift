@@ -33,9 +33,13 @@ class SignInVC: UIViewController {
             messageLabel.isHidden = false
             messageLabel.text = "📩 password and conform password not equal"
             return false}
+        if password!.count < 7 || confirmPass!.count < 7 {
+            messageLabel.isHidden = false
+            messageLabel.text = "📩 the password must be more than 7 characters or numbers."
+            return false}
             
         if email?.isEmail() == false {
-           messageLabel.isHidden = false
+            messageLabel.isHidden = false
             messageLabel.text = "📩 enter a valid email address"
             return false}
         
