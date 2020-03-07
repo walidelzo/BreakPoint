@@ -16,6 +16,7 @@ class AuthService {
         Auth.auth().createUser(withEmail: email, password: passWord) { (user, error) in
             guard let user = user else {
                 userCreationCompletion(false,error!)
+                print("---------")
                 return
             }
             let userData = ["provider" : user.user.providerID , "email" : user.user.email]
@@ -34,5 +35,10 @@ class AuthService {
           userLoginSuccess(true , nil)
         }
         
+    }
+    
+    func logOutUser() {
+      try! (Auth.auth().signOut())
+        print("the user is loged out...")
     }
 }

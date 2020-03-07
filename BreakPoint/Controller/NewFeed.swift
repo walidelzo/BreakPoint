@@ -7,24 +7,44 @@
 //
 
 import UIKit
+import Firebase
 
 class NewFeed: UIViewController {
-
+    
+    @IBOutlet weak var profileImage: UIImageView!
+    @IBOutlet weak var profileEmail: UILabel!
+    @IBOutlet weak var postMessageText: UITextView!
+    @IBOutlet weak var sendButton: UIButton!
+    let defaultTextInPostMessageText = "write your message ....."
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        postMessageText.delegate = self
+        // sendButton.isEnabled = false
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func closePostScreen(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
     }
-    */
+    
+    @IBAction func sendButtonPressed(_ sender: Any) {
+        if postMessageText.text.count > 0 {sendButton.isEnabled = true} else {return}
+        
+        if postMessageText.text != nil || postMessageText.text != defaultTextInPostMessageText {
+            DataService.instance.WriteANewPost(withMessage: postMessageText.text, AndSenderID: Auth.auth().currentUser!.uid, groupID: nil) { (completeSaved) in              if(completeSaved){
+                print("the post was sent..")
+            }else {
+                print("error occured")
+                }
+            }
+        }
+        
+    }
+    
+    
+}
 
+extension NewFeed:UITextViewDelegate {
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        postMessageText.text = ""
+    }
 }

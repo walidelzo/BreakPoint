@@ -13,11 +13,17 @@ class SignInVC: UIViewController {
     @IBOutlet weak var passWordTextField: CustomTextField!
     @IBOutlet weak var confirmPasswordTextField: CustomTextField!
     @IBOutlet weak var messageLabel: RoundLabelView!
+    
     override func viewDidLoad() {
         messageLabel.isHidden = true
         super.viewDidLoad()
+        let dismissTap = UITapGestureRecognizer(target: self, action: #selector(dismissKeyBoard))
+        self.view.addGestureRecognizer(dismissTap)
     }
     
+   @objc func dismissKeyBoard() {
+        self.view.endEditing(true);
+    }
     func checker()->Bool {
         let email = emailTextField.text
         let password = passWordTextField.text
@@ -50,29 +56,42 @@ class SignInVC: UIViewController {
         if checker() {
             AuthService.instance.loginUser(withEmail: emailTextField.text!, andPassword: passWordTextField.text!) { (loginSucccess, loginError) in
                 if loginSucccess {
-                    self.dismiss(animated: true, completion: nil)
+                   // self.dismiss(animated: true, completion: nil)
+                    print("the login succ..")
+                    let signInVC = self.storyboard?.instantiateViewController(withIdentifier: "MainScreen")
+                    self.present(signInVC!, animated: true, completion: nil)
+                    
                 } else {
                     print(String(describing: loginError!.localizedDescription))
-                }
-            }
-            
-            AuthService.instance.createUser(withEmail: self.emailTextField.text!, andPassword: self.passWordTextField.text!) { (createUserSucess, creatError) in
-                if createUserSucess {
-                    AuthService.instance.loginUser(withEmail: self.emailTextField.text!, andPassword: self.passWordTextField.text!) { (logSuccess, logError) in
-                        if (logSuccess) {
-                            print("the user is created sucessfully")
-                        }else {
-                            print(String(describing: logError))
-                        }
+                    let theUserNoFound = "There is no user record corresponding to this identifier. The user may have been deleted."
+                    if (loginError!.localizedDescription == theUserNoFound) {
+//                        self.messageLabel.text! = "✉️ No user Found"
+//                        self.messageLabel.isHidden = false
+                        
+                        
+                        AuthService.instance.createUser(withEmail: self.emailTextField.text!, andPassword: self.passWordTextField.text!) { (createUserSucess, creatError) in
+                                       if createUserSucess {
+                                           AuthService.instance.loginUser(withEmail: self.emailTextField.text!, andPassword: self.passWordTextField.text!) { (logSuccess, logError) in
+                                               if (logSuccess) {
+                                                   print("the user is created sucessfully")
+                                               }else {
+                                                   print(String(describing: logError))
+                                               }
+                                           }
+                                           
+                                       }else {
+                                           print(String(describing: creatError))
+                                       }
+                                   }
+                                   
+                        
+                        //////
                     }
-                    
-                }else {
-                    print(String(describing: creatError))
                 }
             }
-            
-            
-            
+          
+            /// register user if not
+                 
         }
     }
     
