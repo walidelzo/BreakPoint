@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -387,10 +387,10 @@
                                 </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2x1-71-p0A" customClass="MakeShadowToUIView" customModule="BreakPoint" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="129" width="320" height="310"/>
+                                <rect key="frame" x="0.0" y="94" width="320" height="380"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="158-Iw-EK3">
-                                        <rect key="frame" x="20" y="20" width="280" height="270"/>
+                                        <rect key="frame" x="20" y="20" width="280" height="340"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_login" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jA4-oM-WBK">
                                                 <rect key="frame" x="0.0" y="0.0" width="280" height="20"/>
@@ -426,18 +426,30 @@
                                                     <action selector="loginWithGoogleButtonPressed:" destination="dsO-Rb-Cbq" eventType="touchUpInside" id="PgS-e1-g2m"/>
                                                 </connections>
                                             </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tfe-VV-0FQ" userLabel="Email">
+                                                <rect key="frame" x="0.0" y="180" width="280" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="Np3-8F-QBk"/>
+                                                </constraints>
+                                                <state key="normal" title=" Signup" image="emailIcon">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="AuthByEmailButtonPressed:" destination="dsO-Rb-Cbq" eventType="touchUpInside" id="Yyu-wX-SiQ"/>
+                                                </connections>
+                                            </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="or" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1JL-ea-L14">
-                                                <rect key="frame" x="0.0" y="180" width="280" height="20"/>
+                                                <rect key="frame" x="0.0" y="250" width="280" height="20"/>
                                                 <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="17"/>
                                                 <color key="textColor" red="0.1508469284" green="0.624951005" blue="0.7336686254" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jo0-sj-81K">
-                                                <rect key="frame" x="0.0" y="220" width="280" height="50"/>
+                                                <rect key="frame" x="0.0" y="290" width="280" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="bRv-mJ-6e2"/>
                                                 </constraints>
-                                                <state key="normal" title=" Email" image="emailIcon">
+                                                <state key="normal" title=" SignIn" image="emailIcon">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
@@ -507,34 +519,27 @@
                                         <rect key="frame" x="10" y="20" width="300" height="270"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login with Email" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AdS-oN-5OR">
-                                                <rect key="frame" x="0.0" y="0.0" width="300" height="36.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="300" height="46"/>
                                                 <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="17"/>
                                                 <color key="textColor" red="0.15151050690000001" green="0.63792651889999996" blue="0.75559204820000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tMh-j1-ecx" customClass="CustomTextField" customModule="BreakPoint" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="46.5" width="300" height="37"/>
+                                                <rect key="frame" x="0.0" y="56" width="300" height="46"/>
                                                 <color key="backgroundColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                                 <textInputTraits key="textInputTraits" textContentType="email"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RNM-AM-d3n" customClass="CustomTextField" customModule="BreakPoint" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="93.5" width="300" height="36.5"/>
-                                                <color key="backgroundColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
-                                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
-                                            </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="confirm password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CYB-Ig-k0e" customClass="CustomTextField" customModule="BreakPoint" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="140" width="300" height="36.5"/>
+                                                <rect key="frame" x="0.0" y="112" width="300" height="46"/>
                                                 <color key="backgroundColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                                 <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OyW-Mo-Wt2" customClass="RoundedButton" customModule="BreakPoint" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="186.5" width="300" height="37"/>
+                                                <rect key="frame" x="0.0" y="168" width="300" height="46"/>
                                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="17"/>
                                                 <state key="normal" title="Sign In">
@@ -545,7 +550,7 @@
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="✉️ enter user name and password" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E7O-la-8pJ" customClass="RoundLabelView" customModule="BreakPoint" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="233.5" width="300" height="36.5"/>
+                                                <rect key="frame" x="0.0" y="224" width="300" height="46"/>
                                                 <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <color key="textColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -575,7 +580,6 @@
                         <viewLayoutGuide key="safeArea" id="WaM-wJ-Agq"/>
                     </view>
                     <connections>
-                        <outlet property="confirmPasswordTextField" destination="CYB-Ig-k0e" id="bt6-ZC-Tir"/>
                         <outlet property="emailTextField" destination="tMh-j1-ecx" id="xaL-Pg-i7r"/>
                         <outlet property="messageLabel" destination="E7O-la-8pJ" id="3RE-l7-67z"/>
                         <outlet property="passWordTextField" destination="RNM-AM-d3n" id="x9c-cW-HFR"/>
@@ -605,6 +609,101 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="0.0" y="0.0"/>
+        </scene>
+        <!--Sign UpVC-->
+        <scene sceneID="w2f-2h-wNs">
+            <objects>
+                <viewController storyboardIdentifier="SignUpVC" id="nwi-L9-kUh" customClass="SignUpVC" customModule="BreakPoint" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="p7x-VL-Yxz">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CDy-y4-KPo">
+                                <rect key="frame" x="20" y="20" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="5j5-fI-Ho4"/>
+                                    <constraint firstAttribute="height" constant="40" id="c8f-dF-D8A"/>
+                                </constraints>
+                                <state key="normal" image="close"/>
+                                <connections>
+                                    <action selector="closeTheScreen:" destination="nwi-L9-kUh" eventType="touchUpInside" id="cmq-7H-9cl"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e25-Oz-7XU" customClass="MakeShadowToUIView" customModule="BreakPoint" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="75" width="320" height="300"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="eA8-HX-T25">
+                                        <rect key="frame" x="10" y="20" width="300" height="270"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SignUp with Email" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ucy-rJ-HuP">
+                                                <rect key="frame" x="0.0" y="0.0" width="300" height="36.5"/>
+                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="17"/>
+                                                <color key="textColor" red="0.15151050690000001" green="0.63792651889999996" blue="0.75559204820000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qlf-Nx-6yr" customClass="CustomTextField" customModule="BreakPoint" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="46.5" width="300" height="37"/>
+                                                <color key="backgroundColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                                <textInputTraits key="textInputTraits" textContentType="email"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kn3-RQ-Iea" customClass="CustomTextField" customModule="BreakPoint" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="93.5" width="300" height="36.5"/>
+                                                <color key="backgroundColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="confirm password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vVR-w7-fkh" customClass="CustomTextField" customModule="BreakPoint" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="140" width="300" height="36.5"/>
+                                                <color key="backgroundColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rw6-wK-YPT" customClass="RoundedButton" customModule="BreakPoint" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="186.5" width="300" height="37"/>
+                                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="17"/>
+                                                <state key="normal" title="Sign Up">
+                                                    <color key="titleColor" red="0.1508469284" green="0.624951005" blue="0.7336686254" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                </state>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="✉️ enter user name and password" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GI3-mg-2zJ" customClass="RoundLabelView" customModule="BreakPoint" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="233.5" width="300" height="36.5"/>
+                                                <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <color key="textColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="eA8-HX-T25" firstAttribute="top" secondItem="e25-Oz-7XU" secondAttribute="top" constant="20" symbolic="YES" id="6ul-C5-fY0"/>
+                                    <constraint firstAttribute="height" constant="300" id="Cw7-Dg-DCm"/>
+                                    <constraint firstAttribute="trailing" secondItem="eA8-HX-T25" secondAttribute="trailing" constant="10" id="gZ4-1L-kxd"/>
+                                    <constraint firstAttribute="bottom" secondItem="eA8-HX-T25" secondAttribute="bottom" constant="10" id="uQN-mI-sJ4"/>
+                                    <constraint firstItem="eA8-HX-T25" firstAttribute="leading" secondItem="e25-Oz-7XU" secondAttribute="leading" constant="10" id="yQA-Cf-daT"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.1906373237" green="0.20389877440000001" blue="0.22088016229999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="CDy-y4-KPo" firstAttribute="leading" secondItem="6J3-3H-73r" secondAttribute="leading" constant="20" id="Ncl-Fz-kU8"/>
+                            <constraint firstItem="CDy-y4-KPo" firstAttribute="top" secondItem="6J3-3H-73r" secondAttribute="top" constant="20" id="Ssp-4j-MFd"/>
+                            <constraint firstItem="e25-Oz-7XU" firstAttribute="top" secondItem="CDy-y4-KPo" secondAttribute="bottom" constant="15" id="jal-gN-gDs"/>
+                            <constraint firstItem="6J3-3H-73r" firstAttribute="trailing" secondItem="e25-Oz-7XU" secondAttribute="trailing" id="oZj-U5-Zfm"/>
+                            <constraint firstItem="e25-Oz-7XU" firstAttribute="leading" secondItem="6J3-3H-73r" secondAttribute="leading" id="tdE-9V-F7Z"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6J3-3H-73r"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sqh-vc-6w6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1151" y="698"/>
         </scene>
     </scenes>
     <resources>

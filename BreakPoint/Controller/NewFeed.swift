@@ -19,6 +19,7 @@ class NewFeed: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         postMessageText.delegate = self
+        sendButton.makeButtonUpToKeboard()
         // sendButton.isEnabled = false
     }
     

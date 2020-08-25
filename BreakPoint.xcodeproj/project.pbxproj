@@ -7,12 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		021002E42413A2DA00DFD242 /* UIView+ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021002E32413A2DA00DFD242 /* UIView+ext.swift */; };
 		0214028A23D702BA00B41D36 /* RoundLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0214028923D702BA00B41D36 /* RoundLabelView.swift */; };
 		0214028C23D7071100B41D36 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0214028B23D7071100B41D36 /* RoundedButton.swift */; };
 		0216873323D4CFB5008BCC04 /* MakeShadowToUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0216873223D4CFB5008BCC04 /* MakeShadowToUIView.swift */; };
 		024CCC0A23D484EC007E39A6 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024CCC0923D484EC007E39A6 /* SignInVC.swift */; };
 		024CCC0C23D48AB1007E39A6 /* AuthVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024CCC0B23D48AB1007E39A6 /* AuthVC.swift */; };
 		024CCC0E23D48B06007E39A6 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024CCC0D23D48B06007E39A6 /* CustomTextField.swift */; };
+		02BBEDC624F505E100DFAD5C /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BBEDC524F505E100DFAD5C /* SignUpVC.swift */; };
 		02CB81E323D5A8E900CAA26D /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CB81E223D5A8E900CAA26D /* AuthService.swift */; };
 		02CB81E523D5E4B100CAA26D /* StringExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CB81E423D5E4B100CAA26D /* StringExt.swift */; };
 		02ECE95823DECE6700F24728 /* MeProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ECE95723DECE6700F24728 /* MeProfileVC.swift */; };
@@ -29,12 +31,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		021002E32413A2DA00DFD242 /* UIView+ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+ext.swift"; sourceTree = "<group>"; };
 		0214028923D702BA00B41D36 /* RoundLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundLabelView.swift; sourceTree = "<group>"; };
 		0214028B23D7071100B41D36 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		0216873223D4CFB5008BCC04 /* MakeShadowToUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeShadowToUIView.swift; sourceTree = "<group>"; };
 		024CCC0923D484EC007E39A6 /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
 		024CCC0B23D48AB1007E39A6 /* AuthVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthVC.swift; sourceTree = "<group>"; };
 		024CCC0D23D48B06007E39A6 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		02BBEDC524F505E100DFAD5C /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 		02CB81E223D5A8E900CAA26D /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		02CB81E423D5E4B100CAA26D /* StringExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExt.swift; sourceTree = "<group>"; };
 		02ECE95723DECE6700F24728 /* MeProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeProfileVC.swift; sourceTree = "<group>"; };
@@ -119,6 +123,7 @@
 				024CCC0923D484EC007E39A6 /* SignInVC.swift */,
 				02ECE95723DECE6700F24728 /* MeProfileVC.swift */,
 				02ECE95923DF18CB00F24728 /* NewFeed.swift */,
+				02BBEDC524F505E100DFAD5C /* SignUpVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -145,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				02CB81E423D5E4B100CAA26D /* StringExt.swift */,
+				021002E32413A2DA00DFD242 /* UIView+ext.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -302,7 +308,9 @@
 				845FC4F722CCAE5F00EB4AA6 /* GroupsVC.swift in Sources */,
 				02CB81E323D5A8E900CAA26D /* AuthService.swift in Sources */,
 				02CB81E523D5E4B100CAA26D /* StringExt.swift in Sources */,
+				02BBEDC624F505E100DFAD5C /* SignUpVC.swift in Sources */,
 				0216873323D4CFB5008BCC04 /* MakeShadowToUIView.swift in Sources */,
+				021002E42413A2DA00DFD242 /* UIView+ext.swift in Sources */,
 				0214028C23D7071100B41D36 /* RoundedButton.swift in Sources */,
 				845FC4F322CCAE5F00EB4AA6 /* AppDelegate.swift in Sources */,
 				845FC4F522CCAE5F00EB4AA6 /* FeedsVC.swift in Sources */,

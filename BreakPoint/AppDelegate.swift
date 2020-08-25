@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         FirebaseApp.configure()
-        AuthService.instance.logOutUser()
+       // AuthService.instance.logOutUser()
         //show the AuthVC when the user is not Authorized
        // print("\(String(describing: Auth.auth().currentUser!.uid))-----")
         
