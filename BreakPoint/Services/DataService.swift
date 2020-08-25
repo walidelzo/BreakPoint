@@ -18,10 +18,10 @@ class DataService{
     static let instance = DataService()
     
     //private variables
-   private var _REF_DATABASE = DB_REF
-   private var _REF_USERS = DB_REF.child("users")
-   private var _REF_GROUPS = DB_REF.child("groups")
-   private var _REF_FEEDS = DB_REF.child("feed")
+    private var _REF_DATABASE = DB_REF
+    private var _REF_USERS = DB_REF.child("users")
+    private var _REF_GROUPS = DB_REF.child("groups")
+    private var _REF_FEEDS = DB_REF.child("feed")
     
     //public variables
     var REF_DB :DatabaseReference {
@@ -44,6 +44,14 @@ class DataService{
         REF_USERS.child(uid).updateChildValues(userData)
     }
     
-  
+    func WriteANewPost (withMessage message :String ,AndSenderID senderID :String ,groupID :String? , completion:@escaping (_ theMessageWasSent: Bool)->() ) {
+        if groupID != nil{
+            //code here 
+        }else {
+            _REF_FEEDS.childByAutoId().updateChildValues(["message" : message , "senderID" :senderID ])
+            completion(true)
+        }
+        
+    }
     
 }

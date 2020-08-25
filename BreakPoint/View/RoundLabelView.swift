@@ -11,13 +11,12 @@ import UIKit
 class RoundLabelView: UILabel {
 
     override func awakeFromNib() {
-        makeTheViewRounded()
+        makeTheLabelRounded()
         super.awakeFromNib()
     }
-    func makeTheViewRounded() {
-        self.layer.cornerRadius = 10
-        self.layer.borderColor = #colorLiteral(red: 0.05882352963, green: 0.180392161, blue: 0.2470588237, alpha: 1)
-        //self.layer.borderWidth = 4
+    func makeTheLabelRounded() {
+        self.layer.cornerRadius = 5
+        self.layer.masksToBounds = true
     }
 
 }

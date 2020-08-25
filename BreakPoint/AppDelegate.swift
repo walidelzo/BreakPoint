@@ -18,9 +18,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         FirebaseApp.configure()
-        
+       // AuthService.instance.logOutUser()
         //show the AuthVC when the user is not Authorized
-        if Auth.auth().currentUser != nil {
+       // print("\(String(describing: Auth.auth().currentUser!.uid))-----")
+        
+        if Auth.auth().currentUser?.uid == nil {
             let stroryBoard = UIStoryboard(name: "Main", bundle: Bundle.main)
             let AuthVC = stroryBoard.instantiateViewController(withIdentifier: "AuthVC")
             window?.makeKeyAndVisible()

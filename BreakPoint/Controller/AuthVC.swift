@@ -22,7 +22,7 @@ class AuthVC: UIViewController {
     @IBAction func loginWithGoogleButtonPressed(_ sender: Any) {
     }
     @IBAction func AuthByEmailButtonPressed(_ sender: Any) {
-        let signInVC = storyboard?.instantiateViewController(withIdentifier: "SignInVC")
+        let signInVC = storyboard?.instantiateViewController(withIdentifier: "SignUpVC")
         present(signInVC!, animated: true, completion: nil)
     }
     
